@@ -1,6 +1,6 @@
 <template>
   <p class="hs">
-    Highscore: <strong>{{ highscore }}</strong>
+    Highscore: <strong class="hs">{{ highscore }}</strong> ms
   </p>
 </template>
 
@@ -28,8 +28,9 @@ export default {
 <style>
 p.hs {
   margin-top: 1rem;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.6em;
+  font-weight: normal;
   font-family: Arial;
+  text-align: center;
 }
 </style>

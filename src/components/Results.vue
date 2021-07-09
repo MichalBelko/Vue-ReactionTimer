@@ -29,9 +29,16 @@ export default {
 </script>
 
 <style>
-.rank {
-  font-size: 1.4em;
+p {
+  font-size: 1.7em;
+  font-weight: 700;
+  font-family: Arial;
+  margin-top: 80px;
+  text-align: center;
+}
+p strong {
+  color: black;
   font-weight: bold;
-  color: red;
+  text-shadow: 1px 0px 0px #000;
 }
 </style>

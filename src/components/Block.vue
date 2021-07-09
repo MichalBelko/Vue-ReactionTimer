@@ -1,5 +1,5 @@
 <template>
-  <div class="block" v-if="showBlock" @click="stopTimer">click me</div>
+  <div class="block" v-if="showBlock" @click="stopTimer">click</div>
 </template>
 
 <script>
@@ -36,13 +36,16 @@ export default {
 
 <style>
 .block {
-  width: 400px;
+  width: 100%;
   text-align: center;
-  padding: 100px 0;
+  padding: 120px 0;
   margin: 40px auto;
   color: white;
-  background-color: red;
-  border-radius: 20px;
+  font-weight: bold;
+  background-color: rgb(23, 1, 85);
   display: block;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 </style>
