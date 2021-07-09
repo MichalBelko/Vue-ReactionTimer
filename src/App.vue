@@ -1,17 +1,23 @@
 <template>
   <h1>Best Vueion Timer</h1>
-  <button @click="start" :disabled="isPlaying">Play</button>
+
+  <button @click="start" :disabled="isPlaying">
+    Play
+  </button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame" />
+  <!-- <p v-if="isPlaying">Click on the button below ASAP</p> -->
   <Results v-if="showResults" :score="score" />
+  <Highscore v-if="score != 0" :score="score" />
 </template>
 
 <script>
 import Block from "./components/Block.vue";
 import Results from "./components/Results.vue";
+import Highscore from "./components/Highscore.vue";
 
 export default {
   name: "App",
-  components: { Block, Results },
+  components: { Block, Results, Highscore },
   data() {
     return {
       isPlaying: false,
@@ -45,6 +51,9 @@ export default {
   color: #fff;
   margin-top: 60px;
 }
+h1 {
+  font-size: 3em;
+}
 button {
   padding: 1rem 1.5rem;
 }
@@ -54,5 +63,9 @@ body {
 button[disabled] {
   opacity: 0.2;
   cursor: not-allowed;
+}
+strong {
+  color: red;
+  font-size: 1.1em;
 }
 </style>
