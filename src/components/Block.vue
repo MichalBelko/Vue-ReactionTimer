@@ -13,15 +13,12 @@ export default {
     };
   },
   mounted() {
-    console.log("mounted");
     setTimeout(() => {
       this.showBlock = true;
       this.startTimer();
     }, this.delay);
   },
-  updated() {
-    console.log("updated");
-  },
+
   methods: {
     startTimer() {
       this.timer = setInterval(() => {
@@ -31,7 +28,7 @@ export default {
 
     stopTimer() {
       clearInterval(this.timer);
-      console.log(this.reactionTime);
+      this.$emit("end", this.reactionTime);
     },
   },
 };
