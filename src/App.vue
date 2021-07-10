@@ -1,5 +1,5 @@
 <template>
-  <h1>Best Vueion Timer</h1>
+  <h1>Best Reaction Timer evuh</h1>
 
   <button class="button fill" @click="start" :disabled="isPlaying">
     <span>Play</span>
@@ -53,7 +53,10 @@ export default {
 }
 h1 {
   font-size: 3em;
-  text-shadow: 2px 0px 5px rgb(66, 66, 66);
+  background: linear-gradient(to bottom, rgb(19, 0, 104), rgb(40, 54, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 2px 0px 5px rgb(66, 66, 66); */
 }
 
 body {
@@ -65,6 +68,7 @@ body {
   );
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 ::selection {
   color: red;
